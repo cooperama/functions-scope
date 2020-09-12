@@ -104,7 +104,7 @@ function calculateSide(sideA, sideB) {
 
 
 // ```js
-console.log(calculateSide(8, 6));
+// console.log(calculateSide(8, 6));
 // => 10
 // ```
 // <hr>
@@ -116,6 +116,15 @@ console.log(calculateSide(8, 6));
 // ## 5. Sum Array
 // Write a function `sumArray` that takes an **array** as an argument.
 // The array should contain numbers. The function should return the sum of the numbers in the array. **Do not use `.reduce()`**.
+
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
 
 // Expected result:
 // ```javascript
