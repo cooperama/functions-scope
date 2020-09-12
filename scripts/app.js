@@ -150,6 +150,40 @@ function sumArray(arr) {
 // This function can **call on** the previous `checkPrime` function.
 // </details>
 
+
+function checkPrime(num) {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+  for (let i = 2; i <= num / 2; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+// console.log(checkPrime(97));
+// console.log(checkPrime(100));
+// console.log(checkPrime(1));
+// console.log(checkPrime(2));
+// console.log(checkPrime(3));
+// console.log(checkPrime(4)); //
+
+
+function printPrimes(num) {
+  const primes = [];
+  for (let i = 2; i <= num; i++) {
+    if (checkPrime(i)) primes.push(i);
+  }
+  return primes;
+}
+
+console.log(printPrimes(0));
+console.log(printPrimes(1));
+console.log(printPrimes(2));
+console.log(printPrimes(3));
+console.log(printPrimes(4));
+console.log(printPrimes(50));
+console.log(printPrimes(97));
+console.log(printPrimes(127));
+
 // <hr>
 // &#x1F534; **Commit your work.** <br>
 // The commit message should read: <br>
