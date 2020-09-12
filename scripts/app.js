@@ -63,8 +63,21 @@ function checkPalindrome(str) {
 
 // ## 3. Digit Sum
 // Write a function `sumDigits` that accepts a number and returns the sum of its digits.
+
+function sumDigits(num) {
+
+  num = Math.abs(num).toString().split('');
+  return num
+    .map(n => parseInt(n))
+    .reduce((a, b) => a + b);
+}
+
 // ```js
-// console.log(sumDigits(42));
+console.log(sumDigits(42));
+console.log(sumDigits(0));
+console.log(sumDigits(1000));
+console.log(sumDigits(1234));
+console.log(sumDigits(-1234));
 // => 6;
 // ```
 
