@@ -64,20 +64,22 @@ function checkPalindrome(str) {
 // ## 3. Digit Sum
 // Write a function `sumDigits` that accepts a number and returns the sum of its digits.
 
-function sumDigits(num) {
 
+function sumDigits(num) {
   num = Math.abs(num).toString().split('');
   return num
     .map(n => parseInt(n))
     .reduce((a, b) => a + b);
 }
 
-// ```js
-console.log(sumDigits(42));
-console.log(sumDigits(0));
-console.log(sumDigits(1000));
-console.log(sumDigits(1234));
-console.log(sumDigits(-1234));
+// // ```js
+// console.log(sumDigits(42));
+// console.log(sumDigits(0));
+// console.log(sumDigits(1));
+// console.log(sumDigits(10));
+// console.log(sumDigits(1000));
+// console.log(sumDigits(1342));
+// console.log(sumDigits(-1234));
 // => 6;
 // ```
 
@@ -95,8 +97,14 @@ console.log(sumDigits(-1234));
 // _hint:_ checkout the [Math methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) in javascript
 
 // **_restriction_**: for this problem, do NOT use `Math.hypot()` (but for the rest of time, once you've done this problem feel free)
+
+function calculateSide(sideA, sideB) {
+  return Math.sqrt(sideA ** 2 + sideB ** 2);
+}
+
+
 // ```js
-// console.log(calculateSide(8, 6));
+console.log(calculateSide(8, 6));
 // => 10
 // ```
 // <hr>
