@@ -284,15 +284,15 @@ console.log('~~~~~~~~~~~~~~~~')
 
 
 
-function checkPalindrome(str) {
+function checkPalindromeSpacing(str) {
   str = str.toLowerCase().split(' ').join('');
   let reverseStr = str.split('').reverse().join('');
   return str === reverseStr;
 }
 
-console.log(checkPalindrome('Sit on a potato pan Otis'));
-console.log(checkPalindrome('Bird rib'));
-console.log(checkPalindrome('She sells sea shells by the sea shore'));
+console.log(checkPalindromeSpacing('Sit on a potato pan Otis'));
+console.log(checkPalindromeSpacing('Bird rib'));
+console.log(checkPalindromeSpacing('She sells sea shells by the sea shore'));
 
 //     Commit.
 
@@ -301,26 +301,45 @@ console.log("checkPalindrome Again Again")
 console.log('~~~~~~~~~~~~~~~~')
 // 5. Make your palindrome function work even if the string contains punctuation.  So: "Sit on a potato pan, Otis!!!" or "A man, a plan, a canal: Panama." or "Cigar? Toss it in a can! It is so tragic." would pass the test.
 
-function checkPalindrome(str) {
+function checkPalindromePunctuation(str) {
   let words = str.toLowerCase();
   const regex = /\W+/g;
 
   words = words.replaceAll(regex, '');
   reverseWords = words.split('').reverse().join('');
-  
+
   return words === reverseWords;
 }
 
-console.log(checkPalindrome('Sit on a potato pan, Otis!!!'));
-console.log(checkPalindrome('A man, a plan, a canal: Panama'));
-console.log(checkPalindrome('Cigar? Toss it in a can! It is so tragic.'));
-console.log(checkPalindrome('lkajsdfoijw;ekhg'));
+console.log(checkPalindromePunctuation('Sit on a potato pan, Otis!!!'));
+console.log(checkPalindromePunctuation('A man, a plan, a canal: Panama'));
+console.log(checkPalindromePunctuation('Cigar? Toss it in a can! It is so tragic.'));
+console.log(checkPalindromePunctuation('lkajsdfoijw;ekhg'));
 
 //     Commit.
+
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("checkPalindrome Again Again Again")
+console.log('~~~~~~~~~~~~~~~~')
 
 // 6. Make a "word palindrome" function that returns true if the words in a phrase are the same backwards and forwards.  It should not care about spacing, capitalization, or punctuation.  For example the following string would pass the test: 
 
 //     "Son, I am able," she said. "Though you scare me, watch!" said I, "Beloved," I said, "watch me scare you!" Though, said she: "able am I, son."
+
+
+function wordPalindrome(str) {
+  const regex = /[^\w ]+/g;
+  let words = str.toLowerCase();
+  words = words.replaceAll(regex, '');
+  const reverseWords = words.split(' ').reverse().join(' ');
+  return words === reverseWords;
+}
+
+console.log(wordPalindrome('"Son, I am able," she said. "Though you scare me, watch!" said I, "Beloved," I said, "watch me scare you!" Though, said she: "able am I, son."'))
+
+
 
 //     Commit.
 
