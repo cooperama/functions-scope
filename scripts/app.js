@@ -285,9 +285,14 @@ console.log('~~~~~~~~~~~~~~~~')
 
 
 function checkPalindrome(str) {
-  str = str.toLowerCase();
-  return str === str.split('').reverse().join('');
+  str = str.toLowerCase().split(' ').join('');
+  let reverseStr = str.split('').reverse().join('');
+  return str === reverseStr;
 }
+
+console.log(checkPalindrome('Sit on a potato pan Otis'));
+console.log(checkPalindrome('Bird rib'));
+console.log(checkPalindrome('She sells sea shells by the sea shore'));
 
 //     Commit.
 
