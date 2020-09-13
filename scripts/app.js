@@ -278,7 +278,7 @@ console.log(reverseString('work it'));
 
 
 console.log('~~~~~~~~~~~~~~~~')
-console.log("checkPalindrome")
+console.log("checkPalindrome Again")
 console.log('~~~~~~~~~~~~~~~~')
 // 4. Make your palindrome function from problem two above work regardless of spacing (or capitalization). So, for example, "Sit on a potato pan Otis" or "Bird rib" would pass the test.
 
@@ -296,7 +296,25 @@ console.log(checkPalindrome('She sells sea shells by the sea shore'));
 
 //     Commit.
 
+console.log('~~~~~~~~~~~~~~~~')
+console.log("checkPalindrome Again Again")
+console.log('~~~~~~~~~~~~~~~~')
 // 5. Make your palindrome function work even if the string contains punctuation.  So: "Sit on a potato pan, Otis!!!" or "A man, a plan, a canal: Panama." or "Cigar? Toss it in a can! It is so tragic." would pass the test.
+
+function checkPalindrome(str) {
+  let words = str.toLowerCase();
+  const regex = /\W+/g;
+
+  words = words.replaceAll(regex, '');
+  reverseWords = words.split('').reverse().join('');
+  
+  return words === reverseWords;
+}
+
+console.log(checkPalindrome('Sit on a potato pan, Otis!!!'));
+console.log(checkPalindrome('A man, a plan, a canal: Panama'));
+console.log(checkPalindrome('Cigar? Toss it in a can! It is so tragic.'));
+console.log(checkPalindrome('lkajsdfoijw;ekhg'));
 
 //     Commit.
 
