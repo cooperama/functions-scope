@@ -236,7 +236,7 @@ console.log('~~~~~~~~~~~~~~~~')
 
 function insertDash(num) {
   let strNum = num.toString();
-   const regex = /([13579])(?=([13579]))/g;
+   const regex = /([13579])(?=[13579])/g;
   return strNum.replaceAll(regex, '$1-');
 }
 
@@ -260,6 +260,17 @@ console.log("reverseString")
 console.log('~~~~~~~~~~~~~~~~')
 // 3. Write a function `reverseString` that takes a string as a parameter and returns that string with the letters reversed **without using `.split()`, `.reverse()`, or `.join()`**.
 
+function reverseString(str) {
+  let reverse = '';
+  for (let i = str.length-1; i >= 0; i--) {
+    reverse += str[i];
+  }
+  return reverse;
+}
+
+console.log(reverseString('bananarama'));
+console.log(reverseString('reverse'));
+console.log(reverseString('work it'));
 
 
 //     Commit.
