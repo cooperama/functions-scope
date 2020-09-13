@@ -1,4 +1,4 @@
-// console.log('Functions && Scope HW')
+console.log('FUNCTIONS && SCOPE HW')
 
 
 
@@ -7,26 +7,22 @@
 // Write answers to the following questions as comments. 
 
 // 1. What is the difference between a **parameter** and an **argument**?
-/*
 
-When a function is declared, it can take parameters to use in the function. The parameters are like placeholder names.
-Arguments are the values we pass into the function when we call it.
 
-*/
+console.log('When a function is declared, it can take parameters to use in the function. The parameters are like placeholder names. Arguments are the values we pass into the function when we call it.');
+
+
 // 2. Within a function, what is the difference between **return** and **console.log**?
-/*
-
-Console.log is a function that is called and logs the value to the console. 
-Returning a value is when the function gives a value but doesn't log it. 
 
 
-*/
+console.log('Console.log is a function that is called and logs the value to the console. Returning a value is when the function gives a value but doesn\'t log it. ');
+
+
+
 // 3. What are the implications of the ability of a function to return a value?
-/*
 
-When a function returns a value, we can save the value to a variable and use it in another place.
 
-*/
+console.log('When a function returns a value, we can save the value to a variable and use it in another place.');
 
 
 
@@ -36,9 +32,13 @@ When a function returns a value, we can save the value to a variable and use it 
 // "Commit 1 - Verbal questions".
 // <hr>
 
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("checkPalindrome")
+console.log('~~~~~~~~~~~~~~~~')
 // ## 2. Palindrome again.
 // Write a function `checkPalindrome` that accepts a single argument, a string. Yes, you've done it before, but do it again. Later in this assignment we're gonna beef up our palindrome function some. See if you can do it without looking back at your previous answer. The function should return true if the string is a palindrome, false if not. Make sure your function will give the correct answer for words with **capital letters**.
-
 
 function checkPalindrome(str) {
   str = str.toLowerCase();
@@ -46,12 +46,12 @@ function checkPalindrome(str) {
 }
 
 // ```javascript
-// console.log(checkPalindrome("Radar"));
+console.log(checkPalindrome("Radar"));
 //  => true
 // ```
 
 // ```javascript
-// console.log(checkPalindrome("Borscht"));
+console.log(checkPalindrome("Borscht"));
 // => false
 // ```
 
@@ -61,9 +61,14 @@ function checkPalindrome(str) {
 // "Commit 2 - Palindrome".
 // <hr>
 
+
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("sumDigits")
+console.log('~~~~~~~~~~~~~~~~')
 // ## 3. Digit Sum
 // Write a function `sumDigits` that accepts a number and returns the sum of its digits.
-
 
 function sumDigits(num) {
   num = Math.abs(num).toString().split('');
@@ -73,14 +78,14 @@ function sumDigits(num) {
 }
 
 // // ```js
-// console.log(sumDigits(42));
-// console.log(sumDigits(0));
-// console.log(sumDigits(1));
-// console.log(sumDigits(10));
-// console.log(sumDigits(1000));
-// console.log(sumDigits(1342));
-// console.log(sumDigits(-1234));
+console.log(sumDigits(42));
 // => 6;
+console.log(sumDigits(0));
+console.log(sumDigits(1));
+console.log(sumDigits(10));
+console.log(sumDigits(1000));
+console.log(sumDigits(1342));
+console.log(sumDigits(-1234));
 // ```
 
 // <hr>
@@ -89,6 +94,11 @@ function sumDigits(num) {
 // "Commit 3 - Digit Sum".
 // <hr>
 
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("calculateSide")
+console.log('~~~~~~~~~~~~~~~~')
 // ## 4. Pythagoras
 // Write a function `calculateSide` that takes two arguments: `sideA` and `sideB`, and returns the solution for sideC using the Pythagorean theorem.
 
@@ -102,9 +112,8 @@ function calculateSide(sideA, sideB) {
   return Math.sqrt(sideA ** 2 + sideB ** 2);
 }
 
-
 // ```js
-// console.log(calculateSide(8, 6));
+console.log(calculateSide(8, 6));
 // => 10
 // ```
 // <hr>
@@ -113,6 +122,12 @@ function calculateSide(sideA, sideB) {
 // "Commit 4 - Pythagoras".
 // <hr>
 
+
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("sumArray")
+console.log('~~~~~~~~~~~~~~~~')
 // ## 5. Sum Array
 // Write a function `sumArray` that takes an **array** as an argument.
 // The array should contain numbers. The function should return the sum of the numbers in the array. **Do not use `.reduce()`**.
@@ -125,10 +140,9 @@ function sumArray(arr) {
   return sum;
 }
 
-
 // Expected result:
 // ```javascript
-// console.log(sumArray([1, 2, 3, 4, 5, 6]));
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
 // => 21
 // ```
 // <hr>
@@ -137,6 +151,11 @@ function sumArray(arr) {
 // "Commit 5 - Sum Array".
 // <hr>
 
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("checkPrime")
+console.log('~~~~~~~~~~~~~~~~')
 // ## 6. Prime Numbers
 // A Prime number is a number that is not evenly divisible by another number except 1 and itself. If you want to read more deeply about it, [go here](https://en.wikipedia.org/wiki/Prime_number).
 // To test whether a number is Prime, you only need to test as far as the **square root** of that number. This is advisable for optimization and testing large numbers.
@@ -150,7 +169,6 @@ function sumArray(arr) {
 // This function can **call on** the previous `checkPrime` function.
 // </details>
 
-
 function checkPrime(num) {
   if (num <= 1) return false;
   if (num <= 3) return true;
@@ -159,13 +177,19 @@ function checkPrime(num) {
   }
   return true;
 }
-// console.log(checkPrime(97));
-// console.log(checkPrime(100));
-// console.log(checkPrime(1));
-// console.log(checkPrime(2));
-// console.log(checkPrime(3));
-// console.log(checkPrime(4)); //
+console.log(checkPrime(97));
+console.log(checkPrime(100));
+console.log(checkPrime(1));
+console.log(checkPrime(2));
+console.log(checkPrime(3));
+console.log(checkPrime(4)); //
 
+
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("printPrimes")
+console.log('~~~~~~~~~~~~~~~~')
 
 function printPrimes(num) {
   const primes = [];
@@ -204,20 +228,55 @@ console.log(printPrimes(127));
 
 // 1. Complete the afternoon lab. 
 
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("insertDash")
+console.log('~~~~~~~~~~~~~~~~')
 // 2. Write a function `insertDash` that accepts a number as a parameter and returns a string with a dash inserted between any consecutive **odd numbers**. There should not be a dash at the end, it goes only between numbers.
+
+function insertDash(num) {
+  let strNum = num.toString();
+   const regex = /([13579])(?=([13579]))/g;
+  return strNum.replaceAll(regex, '$1-');
+}
+
 // ```javascript
-// console.log(insertDash(454793));
+console.log(insertDash(454793));
+console.log(insertDash(986356123));
+console.log(insertDash(98976799632));
+console.log(insertDash(24680));
+console.log(insertDash(13579));
+console.log(insertDash(97531));
 
 // => 4547-9-3
 // ```
 
 //     Commit.
 
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("reverseString")
+console.log('~~~~~~~~~~~~~~~~')
 // 3. Write a function `reverseString` that takes a string as a parameter and returns that string with the letters reversed **without using `.split()`, `.reverse()`, or `.join()`**.
+
+
 
 //     Commit.
 
+
+
+console.log('~~~~~~~~~~~~~~~~')
+console.log("checkPalindrome")
+console.log('~~~~~~~~~~~~~~~~')
 // 4. Make your palindrome function from problem two above work regardless of spacing (or capitalization). So, for example, "Sit on a potato pan Otis" or "Bird rib" would pass the test.
+
+
+
+function checkPalindrome(str) {
+  str = str.toLowerCase();
+  return str === str.split('').reverse().join('');
+}
 
 //     Commit.
 
